@@ -1,0 +1,2 @@
+# React + Vite
+ecommerce frontend
