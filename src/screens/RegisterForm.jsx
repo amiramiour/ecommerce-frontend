@@ -1,3 +1,4 @@
+// src/screens/RegisterForm.jsx
 import React from "react";
 import InputField from "../components/InputField";
 import CheckboxField from "../components/CheckboxField";
