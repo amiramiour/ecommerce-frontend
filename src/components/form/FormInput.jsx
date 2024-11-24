@@ -1,19 +1,23 @@
+// src/components/InputField.jsx
 import React from "react";
-import FormLabel from "./FormLabel";
+import "./../styles/form.css";
 
-const FormInput = ({ id, label, type, name, required }) => {
+const InputField = ({ label, type, name, required }) => {
   return (
-    <div className="my-3">
-      <FormLabel htmlFor={id} label={label} required={required} />
+    <div className="input-container">
       <input
         type={type}
-        id={id}
         name={name}
-        className="form-control"
+        id={name}
         required={required}
+        placeholder=" "
+        className="input-field"
       />
+      <label htmlFor={name} className="input-label">
+        {label} {required && "*"}
+      </label>
     </div>
   );
 };
 
-export default FormInput;
+export default InputField;
