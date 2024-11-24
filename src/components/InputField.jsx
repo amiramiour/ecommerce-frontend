@@ -1,20 +1,21 @@
 // src/components/InputField.jsx
-import React from 'react';
+import React from "react";
+import "./../styles/form.css";
 
-const InputField = ({ label, type, name, required = false }) => {
+const InputField = ({ label, type, name, required }) => {
   return (
-    <div className="form-group my-3">
-      <label htmlFor={name} className="form-label">
-        {label}
-        {required && <span className="text-danger">&nbsp;*</span>}
-      </label>
+    <div className="input-container">
       <input
         type={type}
-        id={name}
         name={name}
+        id={name}
         required={required}
-        className="form-control"
+        placeholder=" "
+        className="input-field"
       />
+      <label htmlFor={name} className="input-label">
+        {label} {required && "*"}
+      </label>
     </div>
   );
 };
