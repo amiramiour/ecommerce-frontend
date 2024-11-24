@@ -1,50 +1,58 @@
-// src/App.jsx
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import RegisterForm from './screens/RegisterForm';
-import ProfilePage from './screens/ProfilePage'; 
-import Home from './screens/Home'; 
-import './App.css'; 
+import React, { useState } from "react";
+import RegisterForm from "./screens/RegisterForm";
+import HomePage from "./screens/HomePage";  // Import HomePage component
+import "./App.css";
 
 const App = () => {
+  const [currentPage, setCurrentPage] = useState("home"); // Manage page state
+
   return (
-    <Router>
-      <div className="app-container">
-        {/* Header with navigation */}
-        <header className="header">
-          <nav>
-            <ul>
-              <li><a href="/home">Home</a></li>
-              <li><a href="/register">Register</a></li>
-              <li><a href="/profile">Profile</a></li>
-            </ul>
-          </nav>
-        </header>
+    <div className="app-container">
+      {/* Header Section */}
+      <header className="header">
+        <div className="header-logo">Logo</div>
+        <nav className="header-nav">
+          {currentPage !== "signin" && currentPage !== "signup" && (
+            <>
+              <button
+                className="nav-link"
+                onClick={() => setCurrentPage("signin")}
+              >
+                Sign In
+              </button>
+              <button
+                className="nav-link"
+                onClick={() => setCurrentPage("signup")}
+              >
+                Sign Up
+              </button>
+            </>
+          )}
+          {(currentPage === "signin" || currentPage === "signup") && (
+            <button className="nav-link" onClick={() => setCurrentPage("home")}>
+              Back to Home
+            </button>
+          )}
+        </nav>
+      </header>
 
-        {/* Routing configuration */}
-        <Switch>
-          {/* Home Page */}
-          <Route exact path="/home">
-            <Home />
-          </Route>
+      {/* Main Content */}
+      <main className="content">
+        {currentPage === "home" && <HomePage setCurrentPage={setCurrentPage} />}
+        {currentPage === "signup" && <RegisterForm />}
+        {currentPage === "signin" && (
+          <div>
+            <h1>Sign In Page</h1>
+            <p>Sign In form will be added here.</p>
+          </div>
+        )}
+      </main>
 
-          {/* Register Page */}
-          <Route path="/register">
-            <RegisterForm />
-          </Route>
-
-          {/* Profile Page */}
-          <Route path="/profile">
-            <ProfilePage />
-          </Route>
-        </Switch>
-
-        {/* Footer */}
-        <footer className="footer">
-          <p>This is the footer.</p>
-        </footer>
-      </div>
-    </Router>
+      {/* Footer Section */}
+      <footer className="footer">
+        <p>This is footer.</p>
+      </footer>
+    </div>
   );
 };
 
