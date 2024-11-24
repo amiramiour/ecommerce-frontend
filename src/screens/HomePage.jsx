@@ -1,16 +1,23 @@
+//src/screens/HomePage.jsx
 import React from 'react';
-import '../styles/HomePage.css';  // Importing the styling for HomePage
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import '../styles/HomePage.css';
 
 const HomePage = ({ setCurrentPage }) => {
   return (
     <div className="home-page">
-      <h1>Welcome to the E-commerce App</h1>
-      <p>Explore our amazing products and collections!</p>
-      <div className="home-links">
-        <button className="home-btn" onClick={() => setCurrentPage("signup")}>
-          Register Now
-        </button>
+      <Header />
+      <div className="home-content">
+        <h1>Welcome to the E-commerce App</h1>
+        <p>Explore our amazing products and collections!</p>
+        <div className="home-links">
+          <button className="home-btn" onClick={() => setCurrentPage("signup")}>
+            Register Now
+          </button>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 };

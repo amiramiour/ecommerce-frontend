@@ -1,58 +1,32 @@
+//src/App.jsx
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";  // Remplacer Switch par Routes
+import HomePage from "./screens/HomePage";
 import RegisterForm from "./screens/RegisterForm";
-import HomePage from "./screens/HomePage";  // Import HomePage component
+import ProfilePage from "./screens/ProfilePage";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import "./App.css";
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState("home"); // Manage page state
+  const [user, setUser] = useState({ name: "John Doe" });
+  const [orders, setOrders] = useState([
+    { id: "123", status: "Shipped", total: "$50" },
+    { id: "124", status: "Processing", total: "$30" },
+    { id: "125", status: "Delivered", total: "$75" },
+  ]);
 
   return (
-    <div className="app-container">
-      {/* Header Section */}
-      <header className="header">
-        <div className="header-logo">Logo</div>
-        <nav className="header-nav">
-          {currentPage !== "signin" && currentPage !== "signup" && (
-            <>
-              <button
-                className="nav-link"
-                onClick={() => setCurrentPage("signin")}
-              >
-                Sign In
-              </button>
-              <button
-                className="nav-link"
-                onClick={() => setCurrentPage("signup")}
-              >
-                Sign Up
-              </button>
-            </>
-          )}
-          {(currentPage === "signin" || currentPage === "signup") && (
-            <button className="nav-link" onClick={() => setCurrentPage("home")}>
-              Back to Home
-            </button>
-          )}
-        </nav>
-      </header>
-
-      {/* Main Content */}
-      <main className="content">
-        {currentPage === "home" && <HomePage setCurrentPage={setCurrentPage} />}
-        {currentPage === "signup" && <RegisterForm />}
-        {currentPage === "signin" && (
-          <div>
-            <h1>Sign In Page</h1>
-            <p>Sign In form will be added here.</p>
-          </div>
-        )}
-      </main>
-
-      {/* Footer Section */}
-      <footer className="footer">
-        <p>This is footer.</p>
-      </footer>
-    </div>
+    <Router>
+      <div className="app-container">
+        <Routes>
+          <Route path="/home" element={<HomePage setCurrentPage={() => {}} />} />
+          <Route path="/register" element={<RegisterForm />} />
+          <Route path="/profile" element={<ProfilePage user={user} orders={orders} />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 };
 
