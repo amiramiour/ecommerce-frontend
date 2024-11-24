@@ -1,13 +1,11 @@
 // src/components/Button.jsx
-import React from 'react';
+import React from "react";
+import "./../styles/form.css";
 
-const Button = ({ type, label, onClick, className }) => {
+const Button = ({ label, type, className, onClick, icon }) => {
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={`btn ${className}`}
-    >
+    <button type={type} className={`btn ${className}`} onClick={onClick}>
+      {icon && <span className="btn-icon">{icon}</span>}
       {label}
     </button>
   );
