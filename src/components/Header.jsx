@@ -6,18 +6,18 @@ const Header = ({ user, onLogout }) => {
   const navigate = useNavigate();
 
   const handleLogoClick = () => {
-    navigate("/home");  // Redirection vers la page d'accueil
+    navigate("/home");  
   };
 
   const handleLogout = () => {
     onLogout();
-    navigate("/home");  // Rediriger vers la page d'accueil après la déconnexion
+    navigate("/home");  
   };
 
   return (
     <header className="header">
       <div className="header-logo" onClick={handleLogoClick}>
-        Logo  {/* Clic sur le logo redirige vers /home */}
+        Logo  {}
       </div>
       <nav className="header-nav">
         {user ? (
