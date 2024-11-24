@@ -1,24 +1,14 @@
-/* src/styles/form.css */
-.bg-light {
-  background-color: #F8F9FA;
+/* Centrage du formulaire */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  margin: 0;
 }
 
-.p-3 {
-  padding: 1rem;
-}
-
-.form {
-  width: 100%;
-  max-width: 500px;
-  margin: auto;
-  border-radius: 8px;
-}
-
-.input-container {
-  position: relative;
-  margin: 1rem 0;
-}
-
+/* Bordures des inputs ajustées */
 .input-field {
   width: 100%;
   padding: 8px;
@@ -26,43 +16,26 @@
   border-bottom: 2px solid #ccc;
   outline: none;
   background: transparent;
+  transition: border-color 0.3s;
+  margin-bottom: 1rem;
 }
 
 .input-field:focus {
   border-bottom: 2px solid #007BFF;
 }
 
-.input-label {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  transition: 0.3s;
-  color: #aaa;
-}
-
-.input-field:focus ~ .input-label,
-.input-field:not(:placeholder-shown) ~ .input-label {
-  top: -20px;
-  font-size: 12px;
-  color: #007BFF;
-}
-
+/* Espacement entre les colonnes */
 .row {
   display: flex;
   gap: 1rem;
 }
 
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
+/* Ajuste la largeur pour les colonnes côte à côte */
+.row .input-container {
+  flex: 1;
 }
 
-.checkbox-input {
-  margin-right: 8px;
-}
-
+/* Boutons ajustés */
 .btn-group {
   display: flex;
   justify-content: flex-end;
@@ -79,6 +52,7 @@
 .btn-primary {
   background-color: #007BFF;
   color: white;
+  border-radius: 4px;
 }
 
 .btn-primary:hover {
