@@ -20,7 +20,7 @@ const RegisterForm = () => {
         </div>
         <CheckboxField label="Receive marketing info" name="receive_marketing_info" checked={true} />
         <div className="btn-group">
-          <a href="/auth/login" className="btn btn-link">Login</a>
+          <a href="/login" className="btn btn-link">Login</a>
           <Button
             label="Register"
             type="submit"
