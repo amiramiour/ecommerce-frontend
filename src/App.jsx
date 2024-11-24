@@ -32,6 +32,7 @@ const App = () => {
     <div className="app-container">
       <Header user={user} onLogout={handleLogout} />
       <Routes>
+        <Route path="/" element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />
         <Route path="/register" element={<RegisterForm />} />
         <Route path="/profile" element={<ProfilePage user={user} orders={orders} onLogout={handleLogout} />} />
