@@ -1,14 +1,23 @@
-/* Centrage du formulaire */
+/* Conteneur parent pour centrer le formulaire */
 .page-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f8f9fa;
-  margin: 0;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 100vh; /* Pleine hauteur de la fenêtre */
+  margin: 0 auto; /* Assure un centrage si nécessaire */
 }
 
-/* Bordures des inputs ajustées */
+
+/* Formulaire avec dimensions fixes et padding */
+.form {
+  background-color : #f8f9fa;
+  width: 400px; /* Largeur définie */
+  padding: 20px; /* Marges internes pour éviter que le contenu touche les bords */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet esthétique */
+}
+
+/* Inputs avec bordures individuelles */
 .input-field {
   width: 100%;
   padding: 8px;
@@ -28,14 +37,22 @@
 .row {
   display: flex;
   gap: 1rem;
+  margin-bottom: 1rem; /* Espacement entre les lignes */
 }
 
-/* Ajuste la largeur pour les colonnes côte à côte */
+/* Ajuste la largeur des champs côte à côte */
 .row .input-container {
   flex: 1;
 }
 
-/* Boutons ajustés */
+/* Checkboxes bien alignés */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* Boutons positionnés avec un espacement */
 .btn-group {
   display: flex;
   justify-content: flex-end;

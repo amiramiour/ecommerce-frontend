@@ -1,18 +1,8 @@
-/* src/App.css */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
+/* App.css */
+.app-container {
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  height: 100vh; /* Utilise toute la hauteur de la fenêtre */
   margin: 0;
-  padding: 0;
-}
-
-.container {
-  max-width: 600px;
-  margin: auto;
-}
-
-form {
-  border: 1px solid #ddd;
-  background: #fff;
-  border-radius: 8px;
 }
