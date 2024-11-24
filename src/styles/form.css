@@ -20,7 +20,7 @@
 /* Inputs avec bordures individuelles */
 .input-field {
   width: 100%;
-  padding: 8px;
+  padding: 10px 0.1rem;
   border: none;
   border-bottom: 2px solid #ccc;
   outline: none;
