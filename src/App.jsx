@@ -1,11 +1,11 @@
 // src/App.jsx
 import React from 'react';
-import RegisterScreen from './screens/RegisterScreen';
+import RegisterForm from './screens/RegisterForm';
 
 const App = () => {
   return (
     <div>
-      <RegisterScreen />
+      <RegisterForm />
     </div>
   );
 };
