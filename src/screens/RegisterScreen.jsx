@@ -1,57 +1,67 @@
-// src/screens/RegisterScreen.jsx
-import React, { useState } from 'react';
-import InputField from '../components/InputField';
-import Checkbox from '../components/Checkbox';
-import Button from '../components/Button';
+import React from "react";
+import Container from "../components/layout/Container";
+import FormWrapper from "../components/layout/FormWrapper";
+import FormInput from "../components/form/FormInput";
+import FormCheckbox from "../components/form/FormCheckbox";
+import FormRow from "../components/form/FormRow";
+import SubmitButton from "../components/form/SubmitButton";
+import "../assets/styles/Form.css";
 
 const RegisterScreen = () => {
-  const [receiveMarketing, setReceiveMarketing] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add form submission logic here
-    console.log('Form submitted!');
-  };
-
   return (
-    <div className="container mt-5">
-      <form onSubmit={handleSubmit} className="bg-light p-4 rounded">
-        <h2 className="mb-4">Register</h2>
-        <InputField label="Email" type="email" name="email" required />
-        <div className="row">
+    <Container>
+      <FormWrapper>
+        {/* Email */}
+        <FormInput id="email" label="Email" type="email" name="email" required />
+
+        {/* Passwords */}
+        <FormRow>
           <div className="col-sm-6">
-            <InputField label="Password" type="password" name="password" required />
+            <FormInput
+              id="password"
+              label="Password"
+              type="password"
+              name="password"
+              required
+            />
           </div>
           <div className="col-sm-6">
-            <InputField label="Repeat Password" type="password" name="re_password" required />
+            <FormInput
+              id="repeatPassword"
+              label="Repeat Password"
+              type="password"
+              name="repeatPassword"
+              required
+            />
           </div>
-        </div>
-        <div className="row">
+        </FormRow>
+
+        {/* Names */}
+        <FormRow>
           <div className="col-sm-6">
-            <InputField label="First Name" type="text" name="first_name" />
+            <FormInput id="firstName" label="First Name" type="text" name="firstName" />
           </div>
           <div className="col-sm-6">
-            <InputField label="Last Name" type="text" name="last_name" />
+            <FormInput id="lastName" label="Last Name" type="text" name="lastName" />
           </div>
-        </div>
-        <Checkbox
+        </FormRow>
+
+        {/* Checkbox */}
+        <FormCheckbox
+          id="marketing"
           label="Receive marketing info"
-          name="receive_marketing"
-          checked={receiveMarketing}
-          onChange={() => setReceiveMarketing(!receiveMarketing)}
+          name="receive_marketing_info"
         />
-        <div className="d-flex justify-content-between">
-          <a href="/auth/login" className="btn btn-link">
+
+        {/* Buttons */}
+        <div className="my-3 text-end">
+          <a href="/auth/login" className="btn btn-link me-2">
             Login
           </a>
-          <Button
-            type="submit"
-            label="Register"
-            className="btn-primary"
-          />
+          <SubmitButton text="Register" />
         </div>
-      </form>
-    </div>
+      </FormWrapper>
+    </Container>
   );
 };
 
