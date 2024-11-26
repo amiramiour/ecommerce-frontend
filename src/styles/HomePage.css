@@ -1,12 +1,11 @@
 /* Main content styles for HomePage */
-.home-page {
-  text-align: center;
-}
-.home-page {
-  padding: 20px;
-  background-color: #f9f9f9;
-}
 
+.home-page {
+  padding: 19px;
+  background-color: #f9f9f9;
+  text-align: center;
+
+}
 .home-content {
   text-align: center;
 }
