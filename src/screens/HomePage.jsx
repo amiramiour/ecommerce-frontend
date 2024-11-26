@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Footer from "../components/Footer";
 import ProductCard from "../components/ProductCard";
 import "./../styles/HomePage.css";
 
@@ -50,7 +49,6 @@ const HomePage = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </div>
   );
 };
