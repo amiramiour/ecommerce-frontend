@@ -1,0 +1,19 @@
+.user-management {
+    margin: 20px;
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background: #f4f4f4;
+  }
+  
