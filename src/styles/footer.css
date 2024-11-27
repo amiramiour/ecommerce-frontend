@@ -1,9 +1,24 @@
+/* Structure principale pour le body et le container */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  flex: 1; /* Cela permet d'étirer le contenu principal */
+}
+
+/* Footer fixé en bas */
 .footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #f8f9fa;
-    border-top: 1px solid #ddd;
-    bottom: 0;
-    width: 100%;
-  }
-  
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e1e2f;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}

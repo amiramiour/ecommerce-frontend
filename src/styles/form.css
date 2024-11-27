@@ -1,86 +1,80 @@
-/* Conteneur parent pour centrer le formulaire */
+/* Conteneur principal centré */
 .page-container {
   display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
-  height: 100vh; /* Pleine hauteur de la fenêtre */
-  margin: 0 auto; /* Assure un centrage si nécessaire */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f9;
 }
 
-
-/* Formulaire avec dimensions fixes et padding */
+/* Style général du formulaire */
 .form {
-  background-color : #f8f9fa;
-  width: 400px; /* Largeur définie */
-  padding: 20px; /* Marges internes pour éviter que le contenu touche les bords */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet esthétique */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
-/* Inputs avec bordures individuelles */
+/* Titre du formulaire */
+.form-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Champ de saisie */
 .input-field {
   width: 100%;
-  padding: 10px 0.1rem;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  outline: none;
-  background: transparent;
-  transition: border-color 0.3s;
+  padding: 10px;
   margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .input-field:focus {
-  border-bottom: 2px solid #007BFF;
+  border-color: #ff6f61;
+  box-shadow: 0 0 5px rgba(255, 111, 97, 0.3);
+  outline: none;
 }
 
-/* Espacement entre les colonnes */
-.row {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem; /* Espacement entre les lignes */
-}
-
-/* Ajuste la largeur des champs côte à côte */
-.row .input-container {
-  flex: 1;
-}
-
-/* Checkboxes bien alignés */
-.checkbox-container {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-}
-
-/* Boutons positionnés avec un espacement */
-.btn-group {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-}
-
-.btn {
-  padding: 10px 20px;
+/* Style des boutons */
+button {
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 10px 15px;
   border: none;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-primary {
-  background-color: #007BFF;
-  color: white;
-  border-radius: 4px;
+button:hover {
+  background-color: #e14b4b;
+  transform: scale(1.05);
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
+/* Bouton lien */
 .btn-link {
-  color: #007BFF;
+  color: #ff6f61;
   text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease-in-out;
 }
 
 .btn-link:hover {
-  text-decoration: underline;
+  color: #e14b4b;
+}
+
+/* Boutons regroupés */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
 }

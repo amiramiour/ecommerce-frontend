@@ -1,11 +1,9 @@
-/* Main content styles for HomePage */
-
 .home-page {
   padding: 20px;
   background-color: #f9f9f9;
   text-align: center;
-
 }
+
 .home-content {
   text-align: center;
 }
@@ -18,66 +16,42 @@
   margin-top: 20px;
 }
 
-/* Button style for Register Now */
-.home-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.home-btn:hover {
-  background-color: #0056b3;
-}
-
-/* Global container */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Header styles */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.header-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-.nav-link {
-  background: none;
-  border: none;
-  color: #007bff;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.nav-link:hover {
-  color: #0056b3;
-}
-
-/* Footer styles */
-.footer {
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 250px;
   text-align: center;
-  padding: 1rem;
-  background-color: #f8f9fa;
-  border-top: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 13px;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image-container img {
+  transition: transform 0.5s;
+}
+
+.product-card:hover .product-image-container img {
+  transform: scale(1.1);
+}
+
+.product-title {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product-price {
+  color: black;
 }
