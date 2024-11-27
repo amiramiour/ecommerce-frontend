@@ -1,0 +1,19 @@
+.admin-dashboard {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .admin-nav button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 5px;
+  }
+  
+  .admin-nav .active {
+    background: #2196f3;
+    color: white;
+  }
+  
