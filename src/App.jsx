@@ -9,6 +9,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProductDetails from "./components/ProductDetails";
 import CartPage from "./screens/CartPage";
+import PaymentSuccess from "./screens/PaymentSuccess";
+
 const App = () => {
   const [user, setUser] = useState(null);
   const [orders, setOrders] = useState([
@@ -40,8 +42,7 @@ const App = () => {
         <Route path="/login" element={<LoginForm onLogin={handleLogin} />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<CartPage />} />
-
-
+        <Route path="/payment-success" element={<PaymentSuccess />} />
       </Routes>
       <Footer />
     </div>

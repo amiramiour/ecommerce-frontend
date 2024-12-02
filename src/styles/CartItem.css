@@ -17,6 +17,8 @@
 .cart-item-details {
   flex-grow: 1;
   padding-left: 15px;
+  text-align: center;
+  align-content: center;
 }
 
 .cart-item-details h4 {
@@ -30,7 +32,7 @@
 }
 
 .suppression-button {
-  margin-top: 20px;
+  margin-top: 90px;
   padding: 10px 20px;
   background-color: red;
   color: #fff;
@@ -38,5 +40,5 @@
   border-radius: 4px;
   cursor: pointer;
   height: 35px;
-  width: 100px;
+  width: 110px;
 }

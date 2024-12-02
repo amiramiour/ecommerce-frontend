@@ -46,6 +46,8 @@ const ProductDetails = () => {
           <h2>${product.price}</h2>
           <p className="product-description">{product.description}</p>
 
+          
+
           <h3>Available Sizes:</h3>
           <div className="product-sizes">
             {product.characteristics.Sizes.map((size) => (
